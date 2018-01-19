@@ -3,7 +3,7 @@ require 'openssl'
 module TestDots
   class Api
     def post(payload)
-      http = Net::HTTP.new(TestDots.configuration.server, TestDots.configuration.port)
+      http = Net::HTTP.new(TestDots.configuration.host, TestDots.configuration.port)
       if TestDots.configuration.use_ssl
         http.use_ssl = true
         http.ca_file = TestDots.configuration.cacert_path

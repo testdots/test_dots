@@ -30,7 +30,7 @@ module FakeApiServerHelper
 
   def fake_server_env
     {
-      'TEST_DOTS_SERVER' => @server.host,
+      'TEST_DOTS_HOST' => @server.host,
       'TEST_DOTS_PORT' => @server.port.to_s,
       'TEST_DOTS_KEY' => 'dummy-key'
     }

@@ -1,10 +1,10 @@
 module TestDots
   class Configuration
-    attr_accessor :enabled, :server, :port, :api_key, :endpoint, :use_ssl, :cacert_path, :ci_adapter
+    attr_accessor :enabled, :host, :port, :api_key, :endpoint, :use_ssl, :cacert_path, :ci_adapter
 
     def initialize
       @enabled = true
-      @server = ENV.fetch('TEST_DOTS_SERVER', 'testdots.com')
+      @host = ENV.fetch('TEST_DOTS_HOST', 'testdots.com')
       @port = port = ENV.fetch('TEST_DOTS_PORT', '443')
       @api_key = ENV.fetch('TEST_DOTS_KEY', nil)
       @endpoint = ENV.fetch('TEST_DOTS_ENDPOINT', '/api/v1/builds')
