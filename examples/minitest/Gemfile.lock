@@ -1,0 +1,21 @@
+PATH
+  remote: ../..
+  specs:
+    test_dots (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.10.3)
+    rake (12.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  rake
+  test_dots!
+
+BUNDLED WITH
+   1.15.4
