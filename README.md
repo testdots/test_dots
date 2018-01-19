@@ -18,7 +18,19 @@ end
 TestDots.register_rspec_listener
 ```
 
-**3.** Configure your API key by setting the `TEST_DOTS_KEY` environment variable in your continuous integration tool.
+**3.** If you are using a tool such as `WebMock` or `VCR` to prevent connections to the internet in your test environment add an exception for Test Dots.
+
+```ruby
+VCR.config do |c|
+  c.ignore_hosts TestDots.host
+end
+```
+
+```ruby
+WebMock.disable_net_connect!(allow: TestDots.host)
+```
+**4.** Configure your API key by setting the `TEST_DOTS_KEY` environment variable in your continuous integration tool.
+
 
 ## Integrating with Test Frameworks
 

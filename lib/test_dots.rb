@@ -26,6 +26,10 @@ module TestDots
     yield(configuration)
   end
 
+  def self.host
+    configuration.host
+  end
+
   def self.send_report(attributes)
     ci_adapter = configuration.ci_adapter
     api = TestDots::Api.new
