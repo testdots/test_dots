@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    test_dots (0.1.0)
+    test_dots (0.1.1)
 
 GEM
   remote: https://rubygems.org/
